@@ -132,7 +132,10 @@ const updateNote = async () => {
 </script>
 
 <template>
-  <div v-if="dataLoaded" class="min-h-full mx-auto font-Poppins box-borde">
+  <div
+    v-if="dataLoaded"
+    class="bg-bg-pattern bg-no-repeat bg-cover min-h-screen mx-auto font-Poppins box-border"
+  >
     <!-- Overlay / Modal -->
     <div
       v-if="showModal"
@@ -191,7 +194,7 @@ const updateNote = async () => {
           <div
             v-for="(note, index) in data"
             :key="index"
-            class="relative flex flex-col h-80 w-auto justify-between p-8 border-2 rounded-md shadow-lg"
+            class="relative flex flex-col h-80 w-auto justify-between p-8 rounded-md shadow-lg"
             :style="{ backgroundColor: note.backgroundColor }"
           >
             <p class="text-sm break-words whitespace-pre-wrap">
