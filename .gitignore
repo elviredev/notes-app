@@ -27,4 +27,4 @@ coverage
 *.sln
 *.sw?
 .env.*
-.supabase
+.supabase/init.js
