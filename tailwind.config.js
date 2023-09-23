@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-pattern': "url('./src/assets/images/liquid-cheese.png')"
+        'bg-pattern': "url('./images/liquid-cheese.png')"
       }
     },
     fontFamily: {
