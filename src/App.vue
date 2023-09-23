@@ -132,10 +132,7 @@ const updateNote = async () => {
 </script>
 
 <template>
-  <div
-    v-if="dataLoaded"
-    class="bg-bg-pattern bg-no-repeat bg-cover min-h-screen mx-auto font-Poppins box-border"
-  >
+  <div v-if="dataLoaded" class="bg-perso min-h-screen mx-auto font-Poppins box-border">
     <!-- Overlay / Modal -->
     <div
       v-if="showModal"
@@ -178,10 +175,10 @@ const updateNote = async () => {
     <!-- Notes Container -->
     <div class="container py-10 px-4">
       <header class="flex justify-between items-center">
-        <h1 class="text-2xl text-blue-700 tracking-widest sm:text-4xl">Notes</h1>
+        <h1 class="text-2xl text-blue-500 tracking-widest sm:text-4xl">Notes</h1>
         <button
           @click="showModal = true"
-          class="bg-blue-700 w-12 h-12 rounded-full text-white text-2xl hover:bg-opacity-75"
+          class="bg-blue-500 w-12 h-12 rounded-full text-white text-2xl hover:bg-white hover:text-blue-500 transition-all duration-200"
         >
           +
         </button>
@@ -276,4 +273,9 @@ const updateNote = async () => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.bg-perso {
+  background-color: #0f0f0f;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23708bf4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
 </style>
