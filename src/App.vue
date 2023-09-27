@@ -35,6 +35,7 @@ const resetModal = () => {
 // Méthode permettant de fermer la modale et de réinitialiser les valeurs dans le textarea
 const closeModal = () => {
   showModal.value = false
+  isEditMode.value = false
   resetModal()
 }
 
@@ -132,14 +133,17 @@ const updateNote = async () => {
 </script>
 
 <template>
-  <div v-if="dataLoaded" class="bg-perso min-h-screen mx-auto font-Poppins box-border">
+  <div
+    v-if="dataLoaded"
+    class="relative bg-perso min-h-screen flex flex-col mx-auto font-Poppins box-border"
+  >
     <!-- Overlay / Modal -->
     <div
       v-if="showModal"
-      class="absolute h-full w-full bg-black bg-opacity-75 z-10 flex flex-col justify-center items-center"
+      class="absolute h-full w-full bg-black bg-opacity-75 z-10 flex flex-col items-center"
     >
       <div
-        class="relative flex flex-col bg-white w-full px-8 py-11 sm:max-w-4xl shadow-lg rounded-md"
+        class="relative inset-y-48 flex flex-col items-center bg-white w-full px-8 py-11 sm:max-w-4xl shadow-lg rounded-md"
       >
         <form @submit.prevent="addNote" class="flex flex-col w-full">
           <textarea
